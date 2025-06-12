@@ -36,7 +36,7 @@ python -m pip install -U pip
 # Check for updates
 echo "🔄 Checking for updates to mlc-llm, open-webui, and torch..."
 for req in "${REQUIREMENTS[@]}"; do
-  python -m pip install $req || {
+  python -m pip install --quiet $req || {
     echo "⚠️  Failed to update: $req" >&2
     exit 1
   }
