@@ -36,10 +36,13 @@ python -m pip install -U pip
 # Check for updates
 echo "🔄 Checking for updates to mlc-llm, open-webui, and torch..."
 for req in "${REQUIREMENTS[@]}"; do
-  python -m pip install --quiet $req || {
+  echo "⬇️  Installing/updating: pip install $req"
+  if python -m pip install --quiet $req; then
+    echo "✅ Installed: $req"
+  else
     echo "⚠️  Failed to update: $req" >&2
     exit 1
-  }
+  fi
 done
 
 # Run servers in parallel
