@@ -62,6 +62,13 @@ To use a different model:
 mlcweb HF://mlc-ai/Qwen3-14B-q4f16_1-MLC
 ```
 
+You can also pass additional arguments to mlc_llm (see [MLC Documentation](https://llm.mlc.ai/docs/deploy/rest.html#launch-the-server))
+
+```bash
+mlcweb HF://mlc-ai/Qwen3-32B-q4f16_1-MLC --overrides "tensor_parallel_shards=2"
+```
+> **Note:** You must always specify a model as the first argument. The script assumes the first argument is an alternate model.
+
 ---
 
 ## 📄 License
