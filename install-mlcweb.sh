@@ -3,7 +3,7 @@
 set -euo pipefail
 
 INSTALL_PATH="/usr/local/bin/mlcweb"
-SCRIPT_URL="https://raw.githubusercontent.com/JackBinary/mlcweb/refs/heads/main/mlcweb.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/JackBinary/mlcweb/refs/heads/cu122/mlcweb.sh"
 
 echo "📦 Downloading mlcweb launcher from:"
 echo "    $SCRIPT_URL"
