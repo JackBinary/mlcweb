@@ -37,7 +37,7 @@ Before installing, make sure your system has:
 Run the following command to install the launcher into `/usr/local/bin/mlcweb`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/JackBinary/mlcweb/refs/heads/main/install-mlcweb.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/JackBinary/mlcweb/refs/heads/cu122/install-mlcweb.sh | sudo bash
 ````
 
 This will download the launcher script and make `mlcweb` available globally.
