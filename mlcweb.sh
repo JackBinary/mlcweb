@@ -5,8 +5,8 @@ set -euo pipefail
 VENV_DIR="$HOME/.mlcweb/venv"
 PYTHON=""
 REQUIREMENTS=(
-  "-U torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu"
-  "--pre -U -f https://mlc.ai/wheels mlc-llm-nightly-cpu mlc-ai-nightly-cpu"
+  "-U torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu122"
+  "--pre -U -f https://mlc.ai/wheels mlc-llm-nightly-cu122 mlc-ai-nightly-cu122"
   "-U open-webui"
 )
 
@@ -56,7 +56,7 @@ echo "🚀 Starting mlc_llm and open-webui..."
 
   # Append --device=vulkan if not specified
   if [[ "$*" != *"--device="* ]]; then
-    set -- "$@" --device=vulkan
+    set -- "$@" --device=cuda
   fi
 
   mlc_llm serve "$@" & pid1=$!
